@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import YTSearch from 'youtube-api-search';
 import Buscador from './buscador';
 import VideoPlayer from './video_player';
+import Sugerencias from './sugerencias';
 
 const API_KEY = 'AIzaSyD7AeJ_fi01jWanRgPibiUCgWuSFb7nFkE';
 class App extends Component {
@@ -27,8 +28,12 @@ class App extends Component {
   render() {
     return(
       <div>
-        <Buscador buscarVideoYoutube={this.buscarVideoYoutube.bind(this)} />
-        <VideoPlayer video={this.state.selectedVideo}/>
+        <Buscador className="amplio" buscarVideoYoutube={this.buscarVideoYoutube.bind(this)} />
+        <div className="row">
+          <VideoPlayer className="col-md-8" video={this.state.selectedVideo}/>
+          <Sugerencias className="col-md-4" videos={this.state.videos} ponerVideo={(video) => {this.setState({selectedVideo: video})}} />  
+        </div>
+        
       </div>
     )
   }
