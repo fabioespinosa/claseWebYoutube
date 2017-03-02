@@ -28,8 +28,8 @@ class App extends Component {
   render() {
     return(
       <div>
-        <Buscador className="amplio" buscarVideoYoutube={this.buscarVideoYoutube.bind(this)} />
-        <div className="row">
+        <Buscador buscarVideoYoutube={this.buscarVideoYoutube.bind(this)} />
+        <div className="row margen">
           <VideoPlayer className="col-md-8" video={this.state.selectedVideo}/>
           <Sugerencias className="col-md-4" videos={this.state.videos} ponerVideo={(video) => {this.setState({selectedVideo: video})}} />  
         </div>

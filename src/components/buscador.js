@@ -16,8 +16,8 @@ class Buscador extends Component {
   
   render() {
     return(
-      <div className="col-md-12 amplio centro">
-        <input className="amplio" type="text" onChange={(event) => this.buscar(event.target.value)}/>
+      <div className="col-md-12 buscador">
+        <input type="text" onChange={(event) => this.buscar(event.target.value)}/>
       </div>
     )
   }

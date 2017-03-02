@@ -1,8 +1,9 @@
-.amplio {
-  width: 100%;
+
+.margen {
+  margin-top: 40px;
+  padding-top: 40px;
 }
 
-.centro {
-  text-align: center;
-  width: 500px;
+.buscador input {
+  min-width: 75%;
 }
